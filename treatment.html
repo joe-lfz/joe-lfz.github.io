@@ -102,36 +102,92 @@
     </div>
 
     <div style="background-color: #d8fbf7;" class="text-center p-5">
-        <h1 class="bg-light fw-bold py-3">Need Help?</h1>
+        <h1 class="bg-light fw-bold py-3 mb-4">Need Help?</h1>
+        <div class="row">
+            <div class="col-3 my-auto">
+                <h5>
+                    What can you do to help people with OCD ?
+                </h5>
+                <br>
+                <ol class="text-start">
+                    <li>Offering emotional support</li>
+                    <li>Create a supportive environment </li>
+                    <li>Be sensitive , modify expectations</li>
+                </ol>
 
-        <div class="row d-flex justify-content-around mt-5">
-            <!-- Card 1 -->
-            <div class="card" style="width: 18rem;">
-                <img src="images/sos.png">
-                <div class="card-body">
-                    <a href="#" class="btn btn-warning">More Details</a>
+            </div>
+            <div class="row col-9 d-flex justify-content-around">
+                <!-- Card 1 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="images/sos.png">
+                    <div class="card-body">
+                        <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal1">More Details</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="images/imh.png">
+                    <div class="card-body mb-0">
+                        <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal2">More Details</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="images/samh.png">
+                    <div class="card-body">
+                        <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal3">More Details</a>
+                    </div>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="card" style="width: 18rem;">
-                <img src="images/sos.png">
-                <div class="card-body">
-                    <a href="#" class="btn btn-warning">More Details</a>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal" id="modal1" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Samaritans of Singapore</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body text-start">
+                  <p>24 Hour Hotline: 1-767 </p>
+                  <p>Website: 
+                    <a href="https://www.sos.org.sg/get-help/other-available-resources">Link</a>
+                  </p>
+                </div>
+              </div>
             </div>
-            <!-- Card 3 -->
-            <div class="card" style="width: 18rem;">
-                <img src="images/sos.png">
-                <div class="card-body">
-                    <a href="#" class="btn btn-warning">More Details</a>
+        </div>
+        <div class="modal" id="modal2" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Institution of Mental Health</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body text-start">
+                  <p>Hotline: 6389 2222 </p>
+                  <p>Website: 
+                    <a href="https://www.imh.com.sg/Mental-Health-Resources/Conditions-and-Challenges/Pages/Obsessive-Compulsive-Disorder.aspx">Link</a>
+                  </p>
+                </div>
+              </div>
             </div>
-            <!-- Card 4 -->
-            <div class="card" style="width: 18rem;">
-                <img src="images/sos.png">
-                <div class="card-body">
-                    <a href="#" class="btn btn-warning">More Details</a>
+        </div>
+        <div class="modal" id="modal3" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Singapore Association for Mental Health</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body text-start">
+                  <p>Hotline: 8511 2678 </p>
+                  <p>Website: 
+                    <a href="https://www.samhealth.org.sg/">Link</a>
+                  </p>
+                </div>
+              </div>
             </div>
         </div>
 
