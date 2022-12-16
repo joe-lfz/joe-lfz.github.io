@@ -1,3 +1,7 @@
 * {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+.navbar {
+  background: linear-gradient(to bottom right, #008080, #66b3b3, #b3d9d9);
+}
