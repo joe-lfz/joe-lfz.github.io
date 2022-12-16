@@ -11,17 +11,198 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css">
 
+    <style>
+        #testtypingcontainer {
+            display: inline-block;
+            position: relative;
+        }
+        #testtypingcontainer:after {
+            content: "|";
+            position: absolute;
+            right: 0;
+            top: 0;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink{
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- INSERT CODE HERE -->
-    <h1>This is the homepage</h1>
-    <p>This is a paragraph to show that the font-family is impact</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">OCD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Symptoms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Treatment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+       <!-- Carousel -->
+       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <div class="carousel-caption d-none d-md-block">
+            <h1 id = "testtypingcontainer"></h1>
+            <br>
+            <button type="button" class="btn btn-light">
+                <a class="text-decoration-none text-dark" href="#overview">What is OCD?</a>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-inner" style="max-height:500px !important;">
+          <div class="carousel-item active">
+            <img src="images/trigger1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/trigger3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/trigger4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- End of Carousel -->
+    <div id="overview" style="background-color: #ffffff;" class="p-5">
+        <div class="row">
+            <div class="col text-center">
+                <h3>What is</h3>
+                <h1>Obsessive Compulsive Disorder?</h1>
+                <br>
+                <p>
+                    OCD, or Obsessive-Compulsive Disorder, is a mental health condition that is characterised by:
+                </p>
+                <ul class="ms-5 text-start">
+                    <li>Recurrent, unwanted thoughts (obsessions)</li>
+                    <li>Repetitive behaviors (compulsions)</li>
+                </ul>
+                <p>
+                    These obsessions can cause significant anxiety and distress, and may lead to compulsions such as excessive hand-washing or organising items in a specific way. OCD is a chronic condition that can cause significant disruption to a person's life and estimated to affect about 2.3% of the population, and can affect people of all ages.
+
+                </p>
+            </div>
+            <div class="col my-auto text-center">
+                <div class="">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DhlRgwdDc-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="background-color: #ace7e2;" class="py-5">
+            <div class="text-center">
+              <img style="max-height: 800px;" src="images/infographic.png">
+            </div>
+        </div>
+    </div>
+
     
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
+    <div id = "testtypingcontainer">
+    </div>
+    <script> //IMPORTANT// All this code below Line 132 is for the typing animation at the front page. Unless you know what you're doing, editing something might possibly break everything, so limit editing anything below this line.
+        const typingtext = "Does this trigger you?" //Replace this with custom text
+        const typingcharacters = typingtext.split("")
+        let i = 0
+        console.log(typingcharacters.length)
+        function type(){
+            if (i < typingcharacters.length) {
+              document.getElementById("testtypingcontainer").innerHTML += typingcharacters[i]
+                i++
+                setTimeout(type, 100)  
+            }  
+        }
+        type();
+       
+        let j = -1
+        setTimeout(function() {
+            function deletecharacters1() {
+                if (j < typingcharacters.length) {
+                    typingcharacters.pop()
+                  document.getElementById("testtypingcontainer").innerHTML = typingcharacters.join("")
+                  j++
+                 setTimeout(deletecharacters1,100)
+            }
+        }
+        deletecharacters1()
+        }, 5000)
+       
+        const typingtext2 = " anger you?" //Replace this with custom text
+        const typingcharacters2 = typingtext2.split("")
+        let k = 0
+        console.log(typingcharacters2.length)
+        function type2(){
+            if (k < typingcharacters2.length) {
+              document.getElementById("testtypingcontainer").innerHTML += typingcharacters2[k]
+                k++
+                setTimeout(type2, 100)  
+            }  
+        }
+       
+        setTimeout(function() {
+            type2()
+        }, 7000)
+       
+        const typingtext3 = "Does this anger you?" //Do not edit this everything will break
+        const typingcharacters3 = typingtext3.split("")
+        let l = -1
+        setTimeout(function() {
+            function deletecharacters3() {
+                if (l < typingcharacters3.length) {
+                    typingcharacters3.pop()
+                  document.getElementById("testtypingcontainer").innerHTML = typingcharacters3.join("")
+                  l++
+                 setTimeout(deletecharacters3,100)
+                }
+            }
+            deletecharacters3()
+        }, 10000)
+       
+        const typingtext4 = " annoy you?" //Pls for the love of all things please do not edit this it will break everything
+        const typingcharacters4 = typingtext4.split("")
+        let m = 0
+        console.log(typingcharacters4.length)
+        function type3(){
+            if (m < typingcharacters4.length) {
+              document.getElementById("testtypingcontainer").innerHTML += typingcharacters4[m]
+                m++
+                setTimeout(type3, 100)  
+            }  
+        }
+        setTimeout(function() {
+            type3()
+        }, 12000)
+    </script>
 </body>
 </html>
